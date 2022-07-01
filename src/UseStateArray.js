@@ -1,9 +1,9 @@
 import "./App.css";
 
-import React from 'react';
+import React, { useState } from 'react';
 
 const UseStateArray = () => {
-    const data = [
+    let data = [
         {
             id: 0, myName: "yash varshney", myAge: 20
         },
@@ -17,15 +17,22 @@ const UseStateArray = () => {
 
         },
     ];
+    const [myarray,sermyarray]=useState(data);
+    const update=()=>{
+        sermyarray([]);
+    }
     return (
         // <div>
         //     <h1 className="h1style">Name: yash varshney & age: 20</h1>
         // </div>
+        
         <>
 
-            {data.map((curElm) => {
+            {myarray.map((curElm) => {
                 return <h1 className="h1style">Name: {curElm.myName} & Age: {curElm.myAge}</h1>
-            })};
+            })}
+
+            <button className="btn" onClick={update}>clear</button>
 
         </>
     )
