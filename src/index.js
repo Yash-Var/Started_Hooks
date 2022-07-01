@@ -1,9 +1,12 @@
 import React from "react";
 import  ReactDOM  from "react-dom";
-import App from "./App.js";
+import UseStateArray from "./UseStateArray";
+// import App from "./App.js";
 ReactDOM.render(
   <>
-    <App />
+    {/* <App /> */}
+    <UseStateArray />
+    
   </>,
 document.getElementById('root')
 );
